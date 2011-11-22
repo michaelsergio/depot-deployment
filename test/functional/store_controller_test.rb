@@ -9,5 +9,10 @@ class StoreControllerTest < ActionController::TestCase
     assert_select 'h3', 'Programming With Ruby 1.9'
     assert_select '.price', /\$[,\d]+\.\d\d/
   end
+  test "markup need for store.js.coffee is in place" do
+    get :index
+    assert_select '.entry > img', 3
+    assert_select '.entry input[type=submit]', 3
+  end
 
 end

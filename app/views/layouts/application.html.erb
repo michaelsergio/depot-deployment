@@ -6,13 +6,18 @@
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
 </head>
-<body id="store">
+<body class="store">
   <div id="banner">
      <%= image_tag("logo.png") %>
      <%= @page_title || "Pragmatic Bookshelf" %>
   </div>
   <div id="columns">
     <div id="side">
+    <% if @cart %>
+      <%= hidden_div_if(@cart.line_items.empty?, id:'cart') do %>
+        <%= render @cart %>
+      <% end %>
+    <% end %>
       <a href="/">Home<br /></a>
       <a href="/faq">Questions<br /></a>
       <a href="/news">News<br /></a>
