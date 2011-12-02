@@ -105,6 +105,10 @@
 
   <ul class="link-list">
   
+    <li><a href="./AdminController.html">AdminController</a>
+  
+    <li><a href="./AdminHelper.html">AdminHelper</a>
+  
     <li><a href="./ApplicationController.html">ApplicationController</a>
   
     <li><a href="./ApplicationHelper.html">ApplicationHelper</a>
@@ -123,6 +127,8 @@
   
     <li><a href="./Order.html">Order</a>
   
+    <li><a href="./OrderNotifier.html">OrderNotifier</a>
+  
     <li><a href="./OrdersController.html">OrdersController</a>
   
     <li><a href="./OrdersHelper.html">OrdersHelper</a>
@@ -133,9 +139,19 @@
   
     <li><a href="./ProductsHelper.html">ProductsHelper</a>
   
+    <li><a href="./SessionsController.html">SessionsController</a>
+  
+    <li><a href="./SessionsHelper.html">SessionsHelper</a>
+  
     <li><a href="./StoreController.html">StoreController</a>
   
     <li><a href="./StoreHelper.html">StoreHelper</a>
+  
+    <li><a href="./User.html">User</a>
+  
+    <li><a href="./UsersController.html">UsersController</a>
+  
+    <li><a href="./UsersHelper.html">UsersHelper</a>
   
   </ul>
 </nav>
@@ -184,7 +200,7 @@
 
           
           <div class="method-source-code" id="create-source">
-            <pre><span class="ruby-comment"># File app/controllers/line_items_controller.rb, line 42</span>
+            <pre><span class="ruby-comment"># File app/controllers/line_items_controller.rb, line 44</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">create</span>
   <span class="ruby-ivar">@cart</span> = <span class="ruby-identifier">current_cart</span>
   <span class="ruby-identifier">product</span> = <span class="ruby-constant">Product</span>.<span class="ruby-identifier">find</span>(<span class="ruby-identifier">params</span>[<span class="ruby-value">:product_id</span>])
@@ -229,7 +245,7 @@
 
           
           <div class="method-source-code" id="destroy-source">
-            <pre><span class="ruby-comment"># File app/controllers/line_items_controller.rb, line 79</span>
+            <pre><span class="ruby-comment"># File app/controllers/line_items_controller.rb, line 81</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">destroy</span>
   <span class="ruby-ivar">@line_item</span> = <span class="ruby-constant">LineItem</span>.<span class="ruby-identifier">find</span>(<span class="ruby-identifier">params</span>[<span class="ruby-value">:id</span>])
   <span class="ruby-ivar">@line_item</span>.<span class="ruby-identifier">destroy</span>
@@ -265,7 +281,7 @@
 
           
           <div class="method-source-code" id="edit-source">
-            <pre><span class="ruby-comment"># File app/controllers/line_items_controller.rb, line 36</span>
+            <pre><span class="ruby-comment"># File app/controllers/line_items_controller.rb, line 38</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">edit</span>
   <span class="ruby-ivar">@line_item</span> = <span class="ruby-constant">LineItem</span>.<span class="ruby-identifier">find</span>(<span class="ruby-identifier">params</span>[<span class="ruby-value">:id</span>])
 <span class="ruby-keyword">end</span></pre>
@@ -295,7 +311,7 @@
 
           
           <div class="method-source-code" id="index-source">
-            <pre><span class="ruby-comment"># File app/controllers/line_items_controller.rb, line 4</span>
+            <pre><span class="ruby-comment"># File app/controllers/line_items_controller.rb, line 6</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">index</span>
   <span class="ruby-ivar">@line_items</span> = <span class="ruby-constant">LineItem</span>.<span class="ruby-identifier">all</span>
 
@@ -330,7 +346,7 @@
 
           
           <div class="method-source-code" id="new-source">
-            <pre><span class="ruby-comment"># File app/controllers/line_items_controller.rb, line 26</span>
+            <pre><span class="ruby-comment"># File app/controllers/line_items_controller.rb, line 28</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">new</span>
   <span class="ruby-ivar">@line_item</span> = <span class="ruby-constant">LineItem</span>.<span class="ruby-identifier">new</span>
 
@@ -365,7 +381,7 @@
 
           
           <div class="method-source-code" id="show-source">
-            <pre><span class="ruby-comment"># File app/controllers/line_items_controller.rb, line 15</span>
+            <pre><span class="ruby-comment"># File app/controllers/line_items_controller.rb, line 17</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">show</span>
   <span class="ruby-ivar">@line_item</span> = <span class="ruby-constant">LineItem</span>.<span class="ruby-identifier">find</span>(<span class="ruby-identifier">params</span>[<span class="ruby-value">:id</span>])
 
@@ -400,7 +416,7 @@
 
           
           <div class="method-source-code" id="update-source">
-            <pre><span class="ruby-comment"># File app/controllers/line_items_controller.rb, line 63</span>
+            <pre><span class="ruby-comment"># File app/controllers/line_items_controller.rb, line 65</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">update</span>
   <span class="ruby-ivar">@line_item</span> = <span class="ruby-constant">LineItem</span>.<span class="ruby-identifier">find</span>(<span class="ruby-identifier">params</span>[<span class="ruby-value">:id</span>])
 

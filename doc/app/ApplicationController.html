@@ -64,7 +64,17 @@
 </nav>
 
     
+    <!-- Method Quickref -->
+<nav id="method-list-section" class="section">
+  <h3 class="section-header">Methods</h3>
+
+  <ul class="link-list">
     
+    <li><a href="#method-i-authorize">#authorize</a>
+    
+  </ul>
+</nav>
+
   </div>
 
   <div id="project-metadata">
@@ -82,6 +92,10 @@
   <h3 class="section-header">Class and Module Index</h3>
 
   <ul class="link-list">
+  
+    <li><a href="./AdminController.html">AdminController</a>
+  
+    <li><a href="./AdminHelper.html">AdminHelper</a>
   
     <li><a href="./ApplicationController.html">ApplicationController</a>
   
@@ -101,6 +115,8 @@
   
     <li><a href="./Order.html">Order</a>
   
+    <li><a href="./OrderNotifier.html">OrderNotifier</a>
+  
     <li><a href="./OrdersController.html">OrdersController</a>
   
     <li><a href="./OrdersHelper.html">OrdersHelper</a>
@@ -111,9 +127,19 @@
   
     <li><a href="./ProductsHelper.html">ProductsHelper</a>
   
+    <li><a href="./SessionsController.html">SessionsController</a>
+  
+    <li><a href="./SessionsHelper.html">SessionsHelper</a>
+  
     <li><a href="./StoreController.html">StoreController</a>
   
     <li><a href="./StoreHelper.html">StoreHelper</a>
+  
+    <li><a href="./User.html">User</a>
+  
+    <li><a href="./UsersController.html">UsersController</a>
+  
+    <li><a href="./UsersHelper.html">UsersHelper</a>
   
   </ul>
 </nav>
@@ -142,6 +168,44 @@
 
     <!-- Methods -->
     
+     <section id="protected-instance-5Buntitled-5D-method-details" class="method-section section">
+      <h3 class="section-header">Protected Instance Methods</h3>
+
+    
+      <div id="method-i-authorize" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">authorize</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code" id="authorize-source">
+            <pre><span class="ruby-comment"># File app/controllers/application_controller.rb, line 15</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">authorize</span>
+  <span class="ruby-keyword">unless</span> <span class="ruby-constant">User</span>.<span class="ruby-identifier">find_by_id</span>(<span class="ruby-identifier">session</span>[<span class="ruby-value">:user_id</span>])
+    <span class="ruby-identifier">redirect_to</span> <span class="ruby-identifier">login_url</span>, <span class="ruby-identifier">notice</span><span class="ruby-operator">:</span> <span class="ruby-string">&quot;Please log in&quot;</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- authorize-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- authorize-method -->
+
+    
+    </section><!-- protected-instance-method-details -->
+  
   </section><!-- 5Buntitled-5D -->
 
 </div><!-- documentation -->
